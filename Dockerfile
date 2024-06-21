@@ -4,8 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN go build -o hello-api
+
+RUN go mod init golang-api && \
+go mod tidy && \
+go build -o golang-api
 
 EXPOSE 8080
 
-CMD ["./hello-api"]
+CMD ["./golang-api"]
