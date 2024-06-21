@@ -51,4 +51,4 @@ jobs:
           git add values.yaml
           git commit -m "change image tag: ${{ env.image_tag }}"
           git -c http.extraHeader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" pull --rebase origin ${{ env.branch_name }}
-          git -c http.extraHeader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin ${{ env.branch_name }}          
+          git -c http.extraHeader="AUTHORIZATION: bearer ${{ secrets.GITHUB_TOKEN }}" push origin ${{ env.branch_name }}
