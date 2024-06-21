@@ -3,7 +3,7 @@ name: Golang Docker Build 🍃
 # triggers ci cd when you push code to any branch
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
   workflow_dispatch:
 
 jobs:
